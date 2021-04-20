@@ -1,0 +1,36 @@
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+lower_case_name1 = name1.lower()
+lower_case_name2 = name2.lower()
+
+t1 = lower_case_name1.count("t")
+t2 = lower_case_name2.count("t")
+r1 = lower_case_name1.count("r")
+r2 = lower_case_name2.count("r")
+u1 = lower_case_name1.count("u")
+u2 = lower_case_name2.count("u")
+e1 = lower_case_name1.count("e")
+e2 = lower_case_name2.count("e")
+true = t1+t2+r1+r2+u1+u2+e1+e2
+
+l1 = lower_case_name1.count("l")
+l2 = lower_case_name2.count("l")
+o1 = lower_case_name1.count("o")
+o2 = lower_case_name2.count("o")
+v1 = lower_case_name1.count ("v")
+v2 = lower_case_name2.count("v")
+e1 = lower_case_name1.count("e")
+e2 = lower_case_name2.count("e")
+love = l1+l2+o1+o2+v1+v2+e1+e2
+
+true_love = str(true) + str(love)
+int_true_love = int(true_love)
+
+if int_true_love < 10 or int_true_love > 90:
+  print(f"Your score is {int_true_love}, you go together like coke with mentos")
+elif int_true_love >= 40 and int_true_love <= 50:
+  print (f"Your score is {int_true_love}, you are allright together")
+else:
+  print(f"Your score is {int_true_love}")
