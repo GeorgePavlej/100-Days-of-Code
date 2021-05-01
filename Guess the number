@@ -1,0 +1,54 @@
+from random import randint
+print ("Welcome to the Guessing Game")
+print("I'am thinking beetwen number 1 and 100.")
+computer_number = randint(1,101)
+difficulty = input("Please choose difficulty. Type 'easy' or 'hard': ").lower()
+
+def easy_level():
+  attempts = 10
+  print (f"You have got {attempts} attempts remaining to guess the number")
+  guess = int(input("Please make a guess: "))
+  while attempts != 1:
+    if guess > computer_number:
+      attempts -= 1
+      print("Too high")
+      print (f"You have got {attempts} attempts remaining to guess the number")
+      guess = int(input("Guess again: "))
+    if guess < computer_number:
+      attempts -= 1
+      print("Too low")
+      print (f"You have got {attempts} attempts remaining to guess the number")
+      guess = int(input("Guess again: "))
+    if guess == computer_number:
+      print(f"Congratulation the number {guess} was correct. You WIN")
+      break
+    if attempts == 1:
+      print("You have run out of guesses. You LOSE!!!")
+      break
+      
+def hard_level():
+  attempts = 7
+  print (f"You have got {attempts} attempts remaining to guess the number")
+  guess = int(input("Please make a guess: "))
+  while attempts != 1:
+    if guess > computer_number:
+      attempts -= 1
+      print("Too high")
+      print (f"You have got {attempts} attempts remaining to guess the number")
+      guess = int(input("Guess again: "))
+    if guess < computer_number:
+      attempts -= 1
+      print("Too low")
+      print (f"You have got {attempts} attempts remaining to guess the number")
+      guess = int(input("Guess again: "))
+    if guess == computer_number:
+      print(f"Congratulation the number {guess} was correct. You WIN")
+      break
+    if attempts == 1:
+      print("You have run out of guesses. You LOSE!!!")
+      break
+
+if difficulty == "easy":
+  easy_level()
+elif difficulty == "hard":
+  hard_level()
