@@ -45,7 +45,7 @@ response_news = requests.get(NEWS_ENDPOINT, params=news_parameters)
 response_news.raise_for_status()
 articles = response_news.json()["articles"]
 
-#Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
+#Use Python slice operator to create a list that contains the first 3 articles
 first_three_articles = articles[:3]
 
 #Create a new list of the first 3 article's headline and description using list comprehension.
